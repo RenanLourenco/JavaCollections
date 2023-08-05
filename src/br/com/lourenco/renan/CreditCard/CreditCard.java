@@ -15,13 +15,8 @@ public class CreditCard {
         this.purchases.add(items);
     }
 
-    public void setCreditLimit(double creditLimit) {
-        this.creditLimit = creditLimit;
-    }
-
-    public List<Purchase> sortPurchases(){
+    public void sortPurchases(){
         purchases.sort(Comparator.comparing(Purchase::getValue));
-        return purchases;
     }
 
     public double getCreditLimit() {
